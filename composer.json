@@ -1,5 +1,5 @@
 {
-  "name": "broadway/broadway-bundle",
+  "name": "household/broadway-bundle",
   "type": "symfony-bundle",
   "description": "Symfony bundle for broadway/broadway.",
   "keywords": [
