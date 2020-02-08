@@ -11,7 +11,7 @@ The easiest way to install and configure the BroadwayBundle with Symfony is by u
 ```
 $ composer require symfony/flex ^1.0
 $ composer config extra.symfony.allow-contrib true
-$ composer require broadway/broadway-bundle
+$ composer require household/broadway-bundle
 ```
 
 Symfony Flex will automatically register and configure the bundle.
