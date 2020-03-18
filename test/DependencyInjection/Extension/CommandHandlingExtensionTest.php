@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of the broadway/broadway package.
+ * This file is part of the broadway/broadway-bundle package.
  *
- * (c) Qandidate.com <opensource@qandidate.com>
+ * (c) 2020 Broadway project
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -25,7 +27,6 @@ class CommandHandlingExtensionTest extends AbstractExtensionTestCase
             new BroadwayExtension(),
         ];
     }
-
 
     /**
      * @test
@@ -50,7 +51,7 @@ class CommandHandlingExtensionTest extends AbstractExtensionTestCase
         $this->load([
             'command_handling' => [
                 'logger' => 'my_service',
-            ]
+            ],
         ]);
 
         $this->assertContainerBuilderHasAlias(
@@ -69,7 +70,7 @@ class CommandHandlingExtensionTest extends AbstractExtensionTestCase
         $this->load([
             'command_handling' => [
                 'logger' => 'my_service',
-            ]
+            ],
         ]);
 
         $this->assertContainerBuilderHasAlias(
@@ -88,8 +89,8 @@ class CommandHandlingExtensionTest extends AbstractExtensionTestCase
         $this->load([
             'command_handling' => [
                 'dispatch_events' => true,
-                'logger'          => 'my_service',
-            ]
+                'logger' => 'my_service',
+            ],
         ]);
 
         $this->assertContainerBuilderHasAlias(

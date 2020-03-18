@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of the broadway/broadway package.
+ * This file is part of the broadway/broadway-bundle package.
  *
- * (c) Qandidate.com <opensource@qandidate.com>
+ * (c) 2020 Broadway project
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -42,7 +44,6 @@ class RegisterSagaCompilerPassTest extends AbstractCompilerPassTestCase
         $sagaManager->addArgument([]);
         $this->setDefinition('broadway.saga.multiple_saga_manager', $sagaManager);
 
-
         $saga1 = new Definition();
         $saga1->addTag('broadway.saga', [
             'type' => 'saga_1',
@@ -76,7 +77,6 @@ class RegisterSagaCompilerPassTest extends AbstractCompilerPassTestCase
         $this->expectExceptionMessage('Tag "broadway.saga" of service "my_saga_1" should have a "type" attribute, indicating the type of saga it represents');
         $sagaManager = new Definition();
         $this->setDefinition('broadway.saga.multiple_saga_manager', $sagaManager);
-
 
         $saga1 = new Definition();
         $saga1->addTag('broadway.saga');
