@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of the broadway/broadway package.
+ * This file is part of the broadway/broadway-bundle package.
  *
- * (c) Qandidate.com <opensource@qandidate.com>
+ * (c) 2020 Broadway project
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -20,7 +22,7 @@ class CommandHandlingConfigurationTest extends TestCase
     use ConfigurationTestCaseTrait;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function getConfiguration()
     {
@@ -37,8 +39,8 @@ class CommandHandlingConfigurationTest extends TestCase
             [
                 'command_handling' => [
                     'dispatch_events' => false,
-                    'logger'          => false,
-                ]
+                    'logger' => false,
+                ],
             ],
             'command_handling'
         );
@@ -53,7 +55,7 @@ class CommandHandlingConfigurationTest extends TestCase
             [
                 'broadway' => [
                     'command_handling' => [
-                        'logger'          => 'logger',
+                        'logger' => 'logger',
                         'dispatch_events' => false,
                     ],
                 ],
@@ -61,8 +63,8 @@ class CommandHandlingConfigurationTest extends TestCase
             [
                 'command_handling' => [
                     'dispatch_events' => true,
-                    'logger'          => 'logger',
-                ]
+                    'logger' => 'logger',
+                ],
             ],
             'command_handling'
         );
